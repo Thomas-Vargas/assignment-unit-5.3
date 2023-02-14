@@ -31,4 +31,25 @@ function showCollection( array ) {
     }
 }
 
+// Test - running showCollection to show number of songs in collection and print a string of info for each song
 showCollection(collection);
+
+function findByArtist( artist ) {
+    let match = [];
+
+    for (let i = 0; i < collection.length; i++) {
+        if(collection[i].artist === artist) {
+            match.push(collection[i]);
+        }
+    }
+    return match;
+}
+
+// Test - test for existing artist
+console.log(findByArtist('Deftones'));
+
+//Test - test for nonexistent artist 
+console.log(findByArtist('Lucy Dacus'));
+
+//Test - test for multiple matches 
+console.log(findByArtist('Gregory Alan Isakov'));
