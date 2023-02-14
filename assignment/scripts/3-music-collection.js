@@ -22,3 +22,13 @@ console.log(addToCollection('Castle Made of Sand', 'Jimi Hendrix', 1967));
 
 // Test - printing collection array
 console.log(collection)
+
+function showCollection( array ) {
+    console.log(`Total of ${array.length} songs in collection:`);
+
+    for (let i = 0; i < array.length; i++) {
+        console.log(`${array[i].title} by ${array[i].artist}, published in year ${array[i].yearPublished}`)
+    }
+}
+
+showCollection(collection);
